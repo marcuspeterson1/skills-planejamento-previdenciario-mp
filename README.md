@@ -2,7 +2,7 @@
 
 Modelo de skills do Claude para planejamento previdenciário de professores (RGPS e RPPS), sem nome de escritório, método ou cliente. **Para baixar tudo:** botão verde **Code → Download ZIP**, no alto desta página, e descompacte.
 
-## Como instalar
+## O que tem aqui
 
 Este repositório tem **3 skills que trabalham juntas**. Instale as três.
 
@@ -11,6 +11,40 @@ Este repositório tem **3 skills que trabalham juntas**. Instale as três.
 | `diagnostico-previdenciario-coloqueseunomeaqui` | Diagnóstico inicial: lê o CNIS do professor e mostra tempo total, tempo regular, tempo em risco e pendências. Gera relatório, slides, roteiro da reunião e lista de documentos. |
 | `planejamento-previdenciario-coloqueseunomeaqui` | Planejamento completo: testa as regras de aposentadoria, calcula a RMI, simula cenários e recomenda a estratégia. |
 | `planejamento-previdenciario-coloqueseunomeaqui-revisor` | Revisor independente: tenta derrubar o planejamento antes de ele ser entregue. |
+
+## Instalação rápida (2 minutos)
+
+**Passo 1 — Baixe o repositório.** Abra o **Terminal** (Mac) ou o **PowerShell** (Windows) e cole:
+
+```bash
+gh repo clone marcuspeterson1/skills-planejamento-previdenciario-mp
+cd skills-planejamento-previdenciario-mp
+claude
+```
+
+O último comando abre o Claude Code dentro da pasta baixada. Se você usa o aplicativo do Claude em vez do terminal, abra essa pasta (`skills-planejamento-previdenciario-mp`) na aba **Code**.
+
+> **O `gh` pediu login, ou você não o tem?** Troque a primeira linha por:
+> `git clone https://github.com/marcuspeterson1/skills-planejamento-previdenciario-mp.git`
+> Sem `git` também? Use o botão verde **Code → Download ZIP** desta página, descompacte, e siga a [instalação manual](#instalação-manual-sem-terminal).
+
+**Passo 2 — Cole este prompt no Claude e aperte Enter:**
+
+```text
+Instale as 3 skills desta pasta no meu Claude Code, para eu usar em qualquer projeto:
+
+1. Copie as 3 pastas de `skills/` para `~/.claude/skills/` (no Windows: `%USERPROFILE%\.claude\skills`). Crie a pasta `skills` se ela não existir.
+2. Se já existir lá uma skill com o mesmo nome, NÃO sobrescreva: me avise e pergunte o que fazer.
+3. Confira que cada skill ficou com o `SKILL.md` direto dentro da sua pasta e me mostre a lista final do que foi instalado.
+4. Me diga, em português simples, se preciso reiniciar o Claude Code.
+5. Depois pergunte qual nome eu quero no lugar de `coloqueseunomeaqui` (meu nome, o do meu escritório ou o do meu método) e faça a troca nas cópias instaladas em `~/.claude/skills/` (não na pasta baixada), nas 3 skills, seguindo a seção "Antes do primeiro uso" de cada uma. Depois me diga o que mais eu preciso preencher.
+```
+
+**Passo 3 — Reinicie o Claude Code** (feche e abra de novo). Pronto: digite `/` e procure "previdenciario", ou peça "roda o diagnóstico desse CNIS" enviando o extrato.
+
+---
+
+## Instalação manual (sem terminal)
 
 O repositório tem duas formas: a pasta `skills/` (para o Claude Code) e a pasta `para-enviar-ao-claude-web/` (para o Claude pelo site ou aplicativo). Escolha **um** dos caminhos abaixo.
 
